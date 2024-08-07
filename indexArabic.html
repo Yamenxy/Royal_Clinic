@@ -72,7 +72,7 @@
   <header id="header">
     <div class="container">
 
-     <nav id="nav-menu-container" class="pull-right">
+      <nav id="nav-menu-container" class="pull-right">
         <ul class="nav-menu">
             <li class="menu-active"><a href="#hero">الرئيسية</a></li>
             <li><a href="#about">عن العيادة</a></li>
@@ -201,7 +201,7 @@
           <div class="section-title-divider"></div>
           
           <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
-            <a href="EnteringDataArabic.html" class="card-link">
+            <a href="EnteringData.html" class="card-link" onclick="storeDoctorName('Doctor 1')">
               <div class="card">
                 <img src="images/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" class="card-img-top" alt="${cardInfo.title}">
                 <div class="card-body">
@@ -213,7 +213,7 @@
           </div>
 
           <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
-            <a href="EnteringDataArabic.html" class="card-link">
+            <a href="EnteringData.html" class="card-link" onclick="storeDoctorName('Doctor 2')">
               <div class="card">
                 <img src="images/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" class="card-img-top" alt="${cardInfo.title}">
                 <div class="card-body">
@@ -225,7 +225,7 @@
           </div>
 
           <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
-            <a href="EnteringDataArabic.html" class="card-link">
+            <a href="EnteringData.html" class="card-link" onclick="storeDoctorName('Doctor 3')">
               <div class="card">
                 <img src="images/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" class="card-img-top" alt="${cardInfo.title}">
                 <div class="card-body">
@@ -237,7 +237,7 @@
           </div>
 
           <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
-            <a href="EnteringDataArabic.html" class="card-link">
+            <a href="EnteringData.html" class="card-link" onclick="storeDoctorName('Doctor 4')">
               <div class="card">
                 <img src="images/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" class="card-img-top" alt="${cardInfo.title}">
                 <div class="card-body">
@@ -249,7 +249,7 @@
           </div>
 
           <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
-            <a href="EnteringDataArabic.html" class="card-link">
+            <a href="EnteringData.html" class="card-link" onclick="storeDoctorName('Doctor 5')">
               <div class="card">
                 <img src="images/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" class="card-img-top" alt="${cardInfo.title}">
                 <div class="card-body">
@@ -261,7 +261,7 @@
           </div>
 
           <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
-            <a href="EnteringDataArabic.html" class="card-link">
+            <a href="EnteringData.html" class="card-link" onclick="storeDoctorName('Doctor 6')">
               <div class="card">
                 <img src="images/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" class="card-img-top" alt="${cardInfo.title}">
                 <div class="card-body">
@@ -273,7 +273,7 @@
           </div>
 
           <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
-            <a href="EnteringDataArabic.html" class="card-link">
+            <a href="EnteringData.html" class="card-link" onclick="storeDoctorName('Doctor 7')">
               <div class="card">
                 <img src="images/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" class="card-img-top" alt="${cardInfo.title}">
                 <div class="card-body">
@@ -285,7 +285,7 @@
           </div>
 
           <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
-            <a href="EnteringDataArabic.html" class="card-link">
+            <a href="EnteringData.html" class="card-link" onclick="storeDoctorName('Doctor 8')">
               <div class="card">
                 <img src="images/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg" class="card-img-top" alt="${cardInfo.title}">
                 <div class="card-body">
@@ -477,6 +477,12 @@
   <script src="lib/easing/easing.js"></script>
 
   <script>
+    function storeDoctorName(name) {
+        localStorage.setItem('selectedDoctor', name);
+    }
+</script>
+
+  <script>
     document.addEventListener("DOMContentLoaded", () => {
       const counters = document.querySelectorAll('.counter');
       const speed = 1000; // The lower the number, the faster the count
@@ -500,21 +506,7 @@
       });
     });
   </script>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const designedByElement = document.querySelector('.credits a');
-      const adminButton = document.getElementById('admin-button');
-      let clickCount = 0;
-  
-      designedByElement.addEventListener('click', function() {
-        clickCount++;
-        if (clickCount === 5) {
-          adminButton.style.display = 'block';
-        }
-      });
-    });
-  </script>
+
   
   
 
