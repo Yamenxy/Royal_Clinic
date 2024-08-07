@@ -167,7 +167,7 @@
                         </table>
                     </div>
                     <br><br><br>
-                    <button type="submit" id="submit">Send</button>
+                    <button type="submit" id="submit">Sign up</button>
                 </div>
                 <div id="loadingOverlay">
                     <div id="loadingBox">
@@ -182,7 +182,22 @@
         </form>
     </div>
     
-    
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            const storedDoctorName = localStorage.getItem('selectedDoctor');
+            if (storedDoctorName) {
+                const doctorSelect = document.getElementById('doctorSelect');
+                for (let option of doctorSelect.options) {
+                    if (option.text === storedDoctorName) {
+                        option.selected = true;
+                        break;
+                    }
+                }
+                // Trigger change event to update timetable and other fields
+                doctorSelect.dispatchEvent(new Event('change'));
+            }
+        });
+    </script>
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzBFbuHcdis5rWAxo0C0c7J9bEwJ5MJrSGBl2okDqGDz4ygfXpH-3c9ngKh1CI5c9kKrQ/exec';
         const form = document.getElementById('contact-form');
