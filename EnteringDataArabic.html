@@ -139,14 +139,14 @@
                     <br>
                     <select name="doctor" id="doctorSelect" required>
                         <option value="">اختر اسم الدكتور</option>
-                        <option value="Doctor 1">Doctor 1</option>
-                        <option value="Doctor 2">Doctor 2</option>
-                        <option value="Doctor 3">Doctor 3</option>
-                        <option value="Doctor 4">Doctor 4</option>
-                        <option value="Doctor 5">Doctor 5</option>
-                        <option value="Doctor 6">Doctor 6</option>
-                        <option value="Doctor 7">Doctor 7</option>
-                        <option value="Doctor 8">Doctor 8</option>
+                        <option value="Doctor 1">دكتور 1</option>
+                        <option value="Doctor 2">دكتور 2</option>
+                        <option value="Doctor 3">دكتور 3</option>
+                        <option value="Doctor 4">دكتور 4</option>
+                        <option value="Doctor 5">دكتور 5</option>
+                        <option value="Doctor 6">دكتور 6</option>
+                        <option value="Doctor 7">دكتور 7</option>
+                        <option value="Doctor 8">دكتور 8</option>
                     </select>
                     <br>
                     <select name="time" id="timeSelect" required style="display: none;">
@@ -318,35 +318,35 @@
             const selectedOption = this.options[this.selectedIndex];
             const selectedDoctor = selectedOption.textContent;
             const timetable = {
-                "Doctor 1": [
+                "دكتور 1": [
                     { day: "Monday", time: "10:00 AM - 2:00 PM" },
                     { day: "Wednesday", time: "1:00 PM - 4:00 PM" }
                 ],
-                "Doctor 2": [
+                "دكتور 2": [
                     { day: "Tuesday", time: "9:00 AM - 12:00 PM" },
                     { day: "Thursday", time: "2:00 PM - 5:00 PM" }
                 ],
-                "Doctor 3": [
+                "دكتور 3": [
                     { day: "Monday", time: "11:00 AM - 3:00 PM" },
                     { day: "Friday", time: "12:00 PM - 3:00 PM" }
                 ],
-                "Doctor 4": [
+                "دكتور 4": [
                     { day: "Wednesday", time: "9:00 AM - 1:00 PM" },
                     { day: "Saturday", time: "11:00 AM - 2:00 PM" }
                 ],
-                "Doctor 5": [
+                "دكتور 5": [
                     { day: "Monday", time: "10:00 AM - 1:00 PM" },
                     { day: "Thursday", time: "3:00 PM - 6:00 PM" }
                 ],
-                "Doctor 6": [
+                "دكتور 6": [
                     { day: "Tuesday", time: "1:00 PM - 4:00 PM" },
                     { day: "Friday", time: "10:00 AM - 1:00 PM" }
                 ],
-                "Doctor 7": [
+                "دكتور 7": [
                     { day: "Wednesday", time: "12:00 PM - 3:00 PM" },
                     { day: "Saturday", time: "10:00 AM - 1:00 PM" }
                 ],
-                "Doctor 8": [
+                "دكتور 8": [
                     { day: "Thursday", time: "9:00 AM - 12:00 PM" },
                     { day: "Sunday", time: "2:00 PM - 5:00 PM" }
                 ]
@@ -358,7 +358,7 @@
                 const tableBody = document.getElementById('doctorTimetable').querySelector('tbody');
                 const timeSelect = document.getElementById('timeSelect');
                 tableBody.innerHTML = '';
-                timeSelect.innerHTML = '<option value="">Choose a time slot</option>';
+                timeSelect.innerHTML = '<option value="">اختر الميعاد</option>';
 
                 doctorInfo.forEach(slot => {
                     const row = document.createElement('tr');
